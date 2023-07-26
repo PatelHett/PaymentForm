@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-p2.css">
+   
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div id="logo"><img src="https://cdn.dribbble.com/users/1440628/screenshots/6308420/kgf_4x.jpg?compress=1&resize=400x300" alt="logo">
+        </div>
+        <ul>
+            <li class="items"><a href="#p2">Home</a></li>
+            <li class="items"><a href="#ques">Mapping</a></li> 
+            <li class="items"><a href="#form">Form</a></li>
+            <li class="items"><a href="#q7">Drag and Drop</a></li>
+        </ul>
+    </nav>    
+    
+    <h1 id="p2"><a href="#inputtag">PRACTICAL-2 </a></h1>
+    <hr>
+
+     <!-- questions -->
+    <ol>
+        <li>Implement Web page for demonstration of BOOKMARK or Anchor Tag.</li>
+        <li>Implement IMAGE MAP with example.</li>
+        <li>Create our own co-intra page layout with three frames. Top frame, left frame and right frame. On the left side frame put links for different subjects of your class in this semester. by clicking on these links Syllabus of relevant subjects will open on the right side frame. use FRAMESET and FRAME tag.</li>
+        <li>Create a webpage with the use of input form tags.</li>
+        <li>Implement a nested list in HTML</li>
+        <li>Demonstrate the use of HTML media. (audio, video, youtube, plug-ins)</li>
+         <li>Implement drag and drop functionality and geo location by HTML API.</li>
+    </ol>
+    
+    <hr>
+
+    <a id="ques" href="#"><h1>MAPPING</h1></a>
+    <img id="img" class="img" src="https://www.politico.com/dims4/default/d1572dd/2147483647/strip/true/crop/605x328+0+0/resize/630x342!/quality/90/?url=http%3A%2F%2Fs3-origin-images.politico.com%2F2014%2F03%2F18%2Fapple_samsung_gty_605.jpg" alt="sports" usemap="#gameup">
+    <map name="gameup" class="c1">
+        <area shape="rect" coords="0,0,300,320" href="https://www.apple.com"   alt="gymnastic"  >
+         <area shape="rect" coords="300,0,600,320" href="https://www.samsung.com" alt="badminton" id="i2"> 
+    </map>
+
+<hr>
+
+    <!-- input form -->
+    <div id="form" class="container">
+        <form action="" method="get">
+            <h1 class="main_heading">Payment Form</h1>
+            <hr>
+            <h2>User Information</h2>
+            <p>Name: *
+                <input type="text" required name="name" placeholder="Het Patel">
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Gender</legend>
+                    Male <input type="radio" name="Gender" id="male" value="M" required> Female <input type="radio" name="Gender" id="male" value="M" required>
+                </fieldset>
+            </p>
+            <p>
+                Address:
+                <textarea placeholder="Enter Your Address" name="Address" id="address" cols="200" value="a" required></textarea>
+          </p>
+          <p>
+            Email:
+            <input type="email" name="email" id="email" required placeholder="het123@gmail.com">
+          </p>
+          <p>
+            Pincode:
+            <input type="number" name="pincode" id="pincode" required placeholder="394107">
+            </p>
+            <h2>Payment Information</h2>
+            <p>
+                Card Type:
+               <select name="card type" id="card type" required>
+                <option value="">--Select Card Type--</option>
+                <option value="visa"> Visa</option>
+                <option value="Mastercard"> Mastercard</option>
+                <option value="rupay"> Rupay</option>
+               </select> 
+            </p>
+            <p>
+                Card Number:*
+                <input type="number" name="card number" id="card number" required placeholder="1111-2222-3333-4444">
+            </p>
+            <p>
+                Expiry Date:*
+                <input type="datetime-local" name="expiry date" id="expiry date" required placeholder="dd/mm/yyyy" >
+            </p>
+            <p>
+                CVV:*
+                <input type="number" name="cvv" id="cvv" required placeholder="123">
+            </p>
+            <p>
+                <input type="submit" value="Pay Now" id="submit" required>
+            </p>
+
+        </form>
+    </div>
+
+<hr>
+        <h1>Example of Nested List</h1>
+        <ul >
+            <li>Vegetable</li>
+            <li>Fruits </li>
+                <ul>
+                    <li>Banana</li>
+                    <li>Watermelon</li>
+                    <li>Pineapple</li>
+                    <li>Pineapple</li>
+                </ul>
+            <li>Milk</li>
+        </ul>
+<hr>
+        <h1>Example of HTML media</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ESnrn1kAD4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+        <video id="video" controls src ="NATURE VIDEO.mp4" width="560" height="315"></video>
+
+<hr>       
+
+<!-- drag and drop -->
+<div id="q7">
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="https://www.w3schools.com/html/img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="70" height="30">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!-- geo api -->
+
+<p>Click the button to get your coordinates.</p>
+</div>
+<section>
+<button onclick="getLocation()">Try It</button>
+<p id="demo"></p>
+</section>
+<script src="script.js"></script>        
+</body>
+</html>
